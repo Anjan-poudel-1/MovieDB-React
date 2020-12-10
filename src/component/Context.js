@@ -1,4 +1,4 @@
-import React,{useState,useContext, createContext} from 'react'
+import React,{useState,useContext, createContext,useEffect} from 'react'
 
  export const MovieContext =createContext();
  export function useMovie (){     //It is used to link up the values where context is being used in other components
@@ -10,7 +10,19 @@ export function MovieProvider(props){
     const[watched,setWatched] = useState([]);
 const [loading,setLoading]= useState(false);
 const [MovieList,SetMovieList] = useState([]);
-const [search,setSearch] = useState('');
+const [MovieName,SetMovieName] = useState('');
+useEffect(() => {
+
+  let tempWishList=  localStorage.getItem("Wishlist")?JSON.parse(localStorage.getItem("Wishlist")):[];
+let tempWatched = localStorage.getItem("Watched")?JSON.parse(localStorage.getItem("Watched")):[]
+  setWishList(tempWishList)
+  setWatched(tempWatched);
+}, [])
+
+useEffect(() => {
+    localStorage.setItem("Wishlist",JSON.stringify(wishList));
+   localStorage.setItem("Watched",JSON.stringify(watched));
+}, [wishList,watched]);
 
 let value={
 wishList,
@@ -21,11 +33,10 @@ setWatched,
 setWishList,
 MovieList,
 SetMovieList,
-search,
-setSearch
-
+MovieName,
+SetMovieName
     }
-
+   
 return(
 
     <MovieContext.Provider value={value}>

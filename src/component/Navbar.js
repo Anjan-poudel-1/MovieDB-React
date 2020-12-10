@@ -6,7 +6,7 @@ function Navbar() {
         <div className={styles.Navbar}>
             
             <div className={styles.logo}>
-                <h1>WatchList</h1>
+                <h1>Movie DB</h1>
             </div>
             <div className={styles.items}>
              <NavLink to="/Watch-List" ><span className={styles.nav}>WatchList</span></NavLink> 

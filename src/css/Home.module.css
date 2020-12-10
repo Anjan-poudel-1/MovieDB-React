@@ -2,10 +2,16 @@
     width: 70%;
 margin:auto;
 text-align: center;
+
+}
+@media(max-width:850px){
+    .home{
+        width: 100%;
+    }
 }
 .search{
     padding: 12px 30px; 
-    width: 50%;
+    width: 70%;
     margin: auto;
     margin-top: 80px;
     border: none;
@@ -28,7 +34,91 @@ font-size: 17px;
     font-size: 17px;
 }
 .main{
-    width: 60%;
+    width: 78%;
     margin: auto;
+margin-top: 40px;
+margin-bottom: 50px;
+}
+.movie{
+    margin-top: 50px;
+    display: flex;
+    
+}
+.image{
+    height: 130px ;
+    width: 120px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 50px;
+    margin-right: 50px;
+}
 
+
+.description{
+    margin-top: 10px;
+    text-align: start;
+}
+.btn{
+    padding: 8px 10px;
+    width: 180px;
+    background-color: teal;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: 50px;
+    cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color: rgb(1, 71, 71);
+}
+.disabled{
+    background-color: rgba(0, 160, 147, 0.274);
+    transition: none;
+}
+.disabled:hover{
+    background-color: rgba(0, 160, 147, 0.274);
+}
+.name{
+   text-align:start;
+    color:#004175;
+
+}
+.year{
+text-align: start;
+}
+
+@media(max-width:480px){
+    .movie{
+        flex-direction: column;
+   
+
+    }
+    .name{
+    text-align: center;
+    }
+    .image{
+    
+        height: 180px ;
+        width: 220px;
+        margin-left: 55px;
+        margin-bottom: 10px;
+    }
+    .description{
+        text-align: center;
+    }
+    .btn{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .year{
+        text-align: center;
+        margin-top: 3px;
+    }
+}
+
+@media(max-width:380px){
+    .image{
+    margin-left: 30px;
+    } 
 }

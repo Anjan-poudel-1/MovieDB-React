@@ -5,6 +5,7 @@
     align-items: center;
     color: white;
     background-color: #002442;
+  
     font-family: sans-serif;
 }
 .logo{
@@ -31,4 +32,19 @@ margin-left: 10%;
     border-radius: 8px;
     background-color:#12BA78;
     cursor: pointer;
+}
+@media(max-width:500px){
+    .logo{
+        flex: 0;
+        width: 0;
+        margin: 0;
+        opacity:0;
+    
+    }
+    .items{
+        width: 100%;
+        text-align:center;
+    margin-left:0%;
+    
+    }
 }
